@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c55aec80608161e48a6ad6f053c39262
+guid: 45152de7f82d86f4b8b7fa68deb3d480
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3794915627631846816
-    second: Screenshot_2025-05-28_102327-removebg-preview (1)_0
+      213: 7314357343437807693
+    second: NPC_wojak_meme01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,19 +97,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -126,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Screenshot_2025-05-28_102327-removebg-preview (1)_0
+      name: NPC_wojak_meme01_0
       rect:
         serializedVersion: 2
-        x: 36
-        y: 14
-        width: 200
-        height: 193
+        x: 1
+        y: 0
+        width: 359
+        height: 366
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06adc6ec750c55bc0800000000000000
-      internalID: -3794915627631846816
+      spriteID: d4061ef2041d18560800000000000000
+      internalID: 7314357343437807693
       vertices: []
       indices: 
       edges: []
@@ -161,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Screenshot_2025-05-28_102327-removebg-preview (1)_0: -3794915627631846816
+      NPC_wojak_meme01_0: 7314357343437807693
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
