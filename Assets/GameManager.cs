@@ -48,6 +48,23 @@ public class GameManager : MonoBehaviour
     [DllImport("__Internal")]
     private static extern void SendScore(int score, int game);
 
+#if UNITY_WEBGL && !UNITY_EDITOR
+  
+    [DllImport("__Internal")]
+    private static extern void Initialization();
+    [DllImport("__Internal")]
+    private static extern void InitializeOGP(string gameId, string playerId);
+    [DllImport("__Internal")]
+    private static extern void SavePoints(int points);
+#else
+    // Editor or other platforms: provide safe stubs
+  //  private static void SendScore(int score, int game) { Debug.Log($"(Stub) SendScore {score} {game}"); }
+    private static void Initialization() { Debug.Log("(Stub) Initialization"); }
+    private static void InitializeOGP(string gameId, string playerId) { Debug.Log($"(Stub) InitializeOGP {gameId} {playerId}"); }
+    private static void SavePoints(int points) { Debug.Log($"(Stub) SavePoints {points}"); }
+#endif
+
+
     // Awake is called when the script instance is being loaded
     private void Awake()
     {
@@ -77,6 +94,9 @@ public class GameManager : MonoBehaviour
         }
 
         ActivateRandomBall();
+
+        Initialization();
+        InitializeOGP("3127439d-765c-442f-b4da-8d9071496fbd", "");
     }
 
     void Update()
@@ -192,6 +212,7 @@ public class GameManager : MonoBehaviour
         GameState = false;
         GameWinScreen.SetActive(true);
         Debug.Log(currentScore);
+        SavePoints(currentScore);
         SendScore(currentScore, 133);
     }
 
@@ -201,6 +222,7 @@ public class GameManager : MonoBehaviour
         GameState = false;
         GameOverScreen.SetActive(true);
         Debug.Log(currentScore);
+        SavePoints(currentScore);
         SendScore(currentScore, 133);
     }
 
